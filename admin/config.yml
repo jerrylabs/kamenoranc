@@ -1,21 +1,18 @@
 backend:
   name: github
   repo: jerrylabs/kamenoranc
+  site_domain: rainbow-meringue-7cdef4
 media_folder: 'static/images/uploads'
 public_folder: '/images/uploads'
 collections:
   - name: posts
-    identifier_field: name
+    label: Články
+    create: true
     format: yaml-frontmatter
     folder: content/blog
-    path: '{{slug}}/index.md'
-    slug: {{fields.slug}}
+    slug: {{slug}}
     fields:
-    - label: "Title"
-      name: "Titulek"
-      widget: "string"
-    - {label: "Datum", name: "date", widget: "datetime", required: false}
-    - {label: "Popis", name: "description", widget: "string", required: false}
-    - {label: "URL", name: "slug", widget: "string"}
-    - {label: "Obrázek", name: "thumbnail", widget: "image", required: false}
+    - {label: Titulek, name: title, widget: string}
+    - {label: Datum, name: date, widget: datetime}
+    - {label: "Popis", name: description, widget: string, required: false}
     - {label: "Text", name: "body", widget: "markdown", comment: 'This is a multiline\ncomment' }
