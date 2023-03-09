@@ -23,7 +23,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-static-cms`,
+    {
+      resolve: `gatsby-plugin-static-cms`,
+      options: {
+        enableIdentityWidget: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
