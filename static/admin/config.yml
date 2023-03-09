@@ -10,9 +10,8 @@ collections:
     create: true
     format: yaml-frontmatter
     folder: content/blog
-    slug: {{slug}}
     fields:
-    - {label: Titulek, name: title, widget: string}
-    - {label: Datum, name: date, widget: datetime}
-    - {label: "Popis", name: description, widget: string, required: false}
+    - {label: "Titulek", name: "title", widget: "string"}
+    - {label: "Datum", name: "date", widget: "datetime"}
+    - {label: "Popis", name: "description", widget: "string", required: false}
     - {label: "Text", name: "body", widget: "markdown", comment: 'This is a multiline\ncomment' }
