@@ -8,7 +8,7 @@ collections:
   - name: posts
     label: Články
     create: true
-    slug: {{slug}}
+    slug: "{{slug}}"
     format: yaml-frontmatter
     folder: content/blog
     fields:
